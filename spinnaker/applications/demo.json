@@ -1,0 +1,14 @@
+{
+  "name": "DEMO",
+  "description": null,
+  "email": "me@pivotal.io",
+  "accounts": "prod",
+  "updateTs": null,
+  "createTs": "1483476824054",
+  "lastModifiedBy": null,
+  "instancePort": null,
+  "platformHealthOnly": false,
+  "cloudProviders": "cf",
+  "user": "[anonymous]",
+  "requiredGroupMembership": []
+}

@@ -1,4 +1,6 @@
 {
+  "name": "Deploy to staging",
+  "application": "demo",
   "appConfig": {},
   "keepWaitingPipelines": false,
   "limitConcurrent": true,

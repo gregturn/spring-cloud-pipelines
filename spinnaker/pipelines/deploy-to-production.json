@@ -1,4 +1,6 @@
 {
+  "name": "Deploy to production",
+  "application": "demo",
   "appConfig": {},
   "keepWaitingPipelines": false,
   "limitConcurrent": true,
