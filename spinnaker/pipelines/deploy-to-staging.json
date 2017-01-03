@@ -1,0 +1,70 @@
+{
+  "appConfig": {},
+  "keepWaitingPipelines": false,
+  "limitConcurrent": true,
+  "parallel": true,
+  "stages": [
+    {
+      "clusters": [
+        {
+          "account": "prod",
+          "application": "demo",
+          "artifact": "spring-cloud-spinnaker-1.0.0.BUILD-SNAPSHOT.jar",
+          "availabilityZones": {
+            "cosmos-refarch": [
+              null
+            ]
+          },
+          "buildpackUrl": "",
+          "capacity": {
+            "desired": 1,
+            "max": 1,
+            "min": 1
+          },
+          "cloudProvider": "cf",
+          "disk": 1024,
+          "envs": {},
+          "implicitSecurityGroups": [],
+          "loadBalancers": "demo-staging",
+          "memory": 1024,
+          "network": "default",
+          "password": "",
+          "provider": "cf",
+          "repository": "https://repo.spring.io/snapshot/org/springframework/cloud/spring-cloud-spinnaker/1.0.0.BUILD-SNAPSHOT/",
+          "securityGroups": [],
+          "services": [],
+          "stack": "staging",
+          "strategy": "highlander",
+          "tags": [],
+          "targetSize": 1,
+          "username": ""
+        }
+      ],
+      "name": "Deploy to staging",
+      "refId": "1",
+      "requisiteStageRefIds": [],
+      "type": "deploy"
+    },
+    {
+      "continuePipeline": false,
+      "failPipeline": true,
+      "job": "spring-cloud-spinnaker",
+      "master": "spring-jenkins",
+      "name": "Run smoke test on jenkins",
+      "parameters": {},
+      "refId": "2",
+      "requisiteStageRefIds": [
+        "1"
+      ],
+      "type": "jenkins"
+    }
+  ],
+  "triggers": [
+    {
+      "enabled": true,
+      "job": "spring-cloud-spinnaker",
+      "master": "spring-jenkins",
+      "type": "jenkins"
+    }
+  ]
+}
