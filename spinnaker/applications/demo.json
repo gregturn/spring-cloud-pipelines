@@ -1,7 +1,7 @@
 {
   "name": "DEMO",
-  "description": null,
-  "email": "me@pivotal.io",
+  "description": "Sample application",
+  "email": "{{cf.account.name}}",
   "accounts": "prod",
   "updateTs": null,
   "createTs": "1483476824054",

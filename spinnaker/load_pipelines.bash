@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-curl -X POST -H "Content-Type: application/json" --data-binary @"pipelines/deploy-to-staging.json" http://front50-pipeline.cfapps.io/pipelines
-
-curl -X POST -H "Content-Type: application/json" --data-binary @"pipelines/deploy-to-production.json" http://front50-pipeline.cfapps.io/pipelines
+./load.py $1 pipelines/deploy-to-staging.json front50 /pipelines
+./load.py $1 pipelines/deploy-to-production.json front50 /pipelines

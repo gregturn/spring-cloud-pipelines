@@ -51,7 +51,7 @@
       "continuePipeline": false,
       "failPipeline": true,
       "job": "spring-cloud-spinnaker",
-      "master": "spring-jenkins",
+      "master": "{{services.jenkins.defaultMaster.name}}",
       "name": "Run smoke test on jenkins",
       "parameters": {},
       "refId": "2",
@@ -65,7 +65,7 @@
     {
       "enabled": true,
       "job": "spring-cloud-spinnaker",
-      "master": "spring-jenkins",
+      "master": "{{services.jenkins.defaultMaster.name}}",
       "type": "jenkins"
     }
   ]
