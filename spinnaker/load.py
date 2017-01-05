@@ -22,9 +22,6 @@ def process_template(artifact_file, template, service, path):
 
     settings = json.load(open(artifact_file))
 
-    # print settings
-    # print settings['namespace']
-
     output = ""
 
     with open(template) as input:
